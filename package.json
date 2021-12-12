@@ -1,0 +1,16 @@
+{
+  "name": "axios-fetch",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "node-fetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
