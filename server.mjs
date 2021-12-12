@@ -20,16 +20,19 @@ function getUsers() {
 
 const getUsersWithAxios = async () => {
   try {
-    console.time('Axios');
+    console.time('--> Axios');
     let users = await axios.get('https://jsonplaceholder.typicode.com/users/');
     users.data.map((user) => {
       console.log(user.name);
     });
-    console.timeEnd('Axios');
+    console.timeEnd('--> Axios');
   } catch (error) {
     console.log(`Error Message: ${error.message} - Error Code: ${error.code}`);
   }
 };
 
-getUsersWithAxios();
-//getUsers();
+const runTest = async () => {
+  const result = await Promise.all([getUsers(), getUsersWithAxios()]);
+};
+
+runTest();
